@@ -4,5 +4,5 @@ languages:
   - javascript
 
 exclude:
-  - ./backend/config/*
-  - ./backend/resources/lang/*
+  - /backend/config/*.php
+  - /backend/resources/lang/*.php
