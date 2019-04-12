@@ -1,0 +1,8 @@
+component_depth: 1
+languages:
+  - php
+  - javascript
+
+exclude:
+  - ./backend/config/*
+  - ./backend/resources/lang/*
