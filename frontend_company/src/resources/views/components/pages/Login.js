@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import AuthAction from "../../../../app/actions/AuthAction";
+import '../../../assets/css/style.css';
 
 class Login extends Component {
 
@@ -21,14 +22,27 @@ class Login extends Component {
     }
 
     render() {
-        return (
-            <div>
-                <form onSubmit={this.onSubmit}>
-                    <input type="text" value={this.state.username} onChange={this.handleChange}/>
-                    <input type="password" value={this.state.password} onChange={this.handleChange} />
-                    <button type="submit">Inloggen</button>
-                </form>
+        // const style = {
+        //     backgroundColor : 'black',
+        //     padding: '8px',
+        // }
 
+        return (
+            <div className="App">
+            <header className="App-header">
+             {/* <h1>DirectInfo</h1> */}
+                <h2>User inlog</h2>
+                <form onSubmit={this.onSubmit}>
+                        <label>username </label>
+                        <input name="username" type="text" value={this.state.username} onChange={this.handleChange}/>
+                        <br/>
+                        <label>password </label>
+                        <input name="password" type="password" value={this.state.password} onChange={this.handleChange} />
+                        <br/>
+                        <button className="App-button" type="submit">Inloggen</button>
+                    </form>
+            </header>
+               
             </div>
         );
     }

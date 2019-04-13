@@ -17,13 +17,14 @@ class AuthAction extends Action {
         dispatch(this.dispatch("pending"));
 
         try {
-            let token = await this.apiClient.post("/oauth/token", {
+            let token = await this.apiClient.post("/oauth/token", {    
                 "grant_type": "password",
                 "client_id": "2",
-                "client_secret": "vd2ymgdVIxpfzUsEiYQsBRetfWM5tpzbebncOVBK",
-                "username": data.username,
-                "password": data.password,
+                "client_secret": "0wK0qNIPmpmYxLsSI1UYU9Gq7Lx16s64nFYuP2Le",
+                "username": "transport@ebmdev.nl",
+                "password": "test123",
                 "scope": "*"
+                
             }, false);
 
             localStorage.setItem("jwt", JSON.stringify(token.data));
@@ -72,3 +73,5 @@ class AuthAction extends Action {
 }
 
 export default AuthAction;
+
+
