@@ -20,7 +20,7 @@ class AuthAction extends Action {
             let token = await this.apiClient.post("/oauth/token", {
                 "grant_type": "password",
                 "client_id": "2",
-                "client_secret": "vd2ymgdVIxpfzUsEiYQsBRetfWM5tpzbebncOVBK",
+                "client_secret": "0wK0qNIPmpmYxLsSI1UYU9Gq7Lx16s64nFYuP2Le",
                 "username": data.username,
                 "password": data.password,
                 "scope": "*"
