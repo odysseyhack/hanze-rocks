@@ -16,7 +16,9 @@ class Login extends Component {
         })
     }
 
-    onSubmit = () => {
+    onSubmit = (e) => {
+        e.preventDefault();
+
         this.props.login(this.state);
     }
 
@@ -24,8 +26,8 @@ class Login extends Component {
         return (
             <div>
                 <form onSubmit={this.onSubmit}>
-                    <input type="text" value={this.state.username} onChange={this.handleChange}/>
-                    <input type="password" value={this.state.password} onChange={this.handleChange} />
+                    <input name="username" type="text" value={this.state.username} onChange={this.handleChange}/>
+                    <input name="password" type="password" value={this.state.password} onChange={this.handleChange} />
                     <button type="submit">Inloggen</button>
                 </form>
 
