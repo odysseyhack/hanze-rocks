@@ -26,6 +26,7 @@ class Dashboard extends Component {
         this.websocketServer = WebsocketService.getInstance();
 
         this.websocketServer.on("EmergencyReceivedEvent", () => {
+            console.log('received')
             this.props.sendSocketDataToState();
         });
     }

@@ -3,12 +3,15 @@ import Reducer from "./Reducer";
 class WebsocketReducer extends Reducer
 {
 
+    static namespace = "socket";
+
     initialState = {
-        emergency: true,
+        emergency: false,
     };
 
     receive(payload, state) {
         return {
+            ...state,
             emergency: true
         }
     }

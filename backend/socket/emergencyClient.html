@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>emergency client html</title>
+	<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io('http://localhost');
+  function sendEmergency(id){ 
+  	socket.emit('emergencyEvent');
+  };
+
+</script>
+</head>
+<body>
+  <button onclick="sendEmergency(this)">Send</button>
+</body>
+</html>
