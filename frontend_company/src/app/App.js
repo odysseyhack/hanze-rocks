@@ -8,8 +8,23 @@ import {history} from "./utils/history";
 import {routes} from "./utils/routing/routes";
 import moment from "moment";
 import {Router} from "react-router-dom";
+import '../resources/assets/css/style.css';
+import WebsocketService from "./services/WebsocketService";
+
 
 class App extends Component {
+
+    /**
+     * @type {WebsocketService}
+     */
+    websocketServer;
+
+    constructor(props) {
+        super(props);
+
+        this.websocketServer = WebsocketService.getInstance();
+    }
+
     componentDidMount() {
         moment.locale(language);
 

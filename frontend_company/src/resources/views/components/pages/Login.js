@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import AuthAction from "../../../../app/actions/AuthAction";
-import '../../../assets/css/style.css';
 
 class Login extends Component {
 

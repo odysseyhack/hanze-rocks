@@ -11,6 +11,7 @@ import CmrPage from "../../../resources/views/components/pages/CmrPage";
 
 export const routes =
     <Switch>
-        <GuestRoute exact path="/" component={Login} />
-        <Route exact path="/cmr" component={CmrPage} />
+        <GuestRoute exact path="/login" component={Login} />
+        <PrivateRoute exact path="/cmr" component={CmrPage} />
+        <Redirect exact from="/" to="/login" />
     </Switch>;

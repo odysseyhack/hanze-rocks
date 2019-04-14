@@ -8,7 +8,7 @@ const GuestRoute = ({component: Component, ...rest}) => {
             {...rest}
             render={props =>
                 localStorage.getItem('jwt') && localStorage.getItem('user') ? (
-                    <Redirect to={{pathname: "/dashboard", state: {from: props.location}}}/>
+                    <Redirect to={{pathname: "/cmr", state: {from: props.location}}}/>
                 ) : (
                     <Component {...props} />
                 )

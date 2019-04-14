@@ -16,6 +16,8 @@ class AuthAction extends Action {
     async login(dispatch, data) {
         dispatch(this.dispatch("pending"));
 
+        console.log(data);
+
         try {
             let token = await this.apiClient.post("/oauth/token", {
                 "grant_type": "password",
