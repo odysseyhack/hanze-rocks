@@ -44,7 +44,7 @@ class WebsocketService extends Service {
     }
 
     _onDisconnect() {
-        this.log("Client disconnected");
+        console.log("Client disconnected");
     }
 }
 
