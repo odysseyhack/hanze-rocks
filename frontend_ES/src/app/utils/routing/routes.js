@@ -11,6 +11,7 @@ import Dashboard from "../../../resources/views/components/pages/Dashboard";
 
 export const routes =
     <Switch>
-        <GuestRoute exact path="/" component={Login} />
+        <GuestRoute exact path="/login" component={Login} />
         <PrivateRoute exact path="/dashboard" component={Dashboard}/>
+        <Redirect exact from="/" to="/login" />
     </Switch>;
