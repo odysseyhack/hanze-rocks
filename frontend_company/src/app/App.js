@@ -14,17 +14,6 @@ import WebsocketService from "./services/WebsocketService";
 
 class App extends Component {
 
-    /**
-     * @type {WebsocketService}
-     */
-    websocketServer;
-
-    constructor(props) {
-        super(props);
-
-        this.websocketServer = WebsocketService.getInstance();
-    }
-
     componentDidMount() {
         moment.locale(language);
 

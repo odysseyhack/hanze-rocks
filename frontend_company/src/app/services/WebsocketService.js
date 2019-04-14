@@ -40,7 +40,7 @@ class WebsocketService extends Service {
      * @private
      */
     _onConnect() {
-        this.log("Client connected");
+        console.log("connected")
     }
 
     _onDisconnect() {
