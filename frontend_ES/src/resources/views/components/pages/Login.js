@@ -17,22 +17,31 @@ class Login extends Component {
     }
 
     onSubmit = (e) => {
-        console.log(this.state);
         e.preventDefault();
 
         this.props.login(this.state);
     }
 
     render() {
-        return (
-            <div>
-                <form onSubmit={this.onSubmit}>
-                    <input name="username" type="text" value={this.state.username} onChange={this.handleChange}/>
-                    <input name="password" type="password" value={this.state.password} onChange={this.handleChange} />
-                    <button type="submit">Inloggen</button>
-                </form>
+        // const style = {
+        //     backgroundColor : 'black',
+        //     padding: '8px',
+        // }
 
-            </div>
+        return (
+                <header className="App-header">
+                    {/* <h1>DirectInfo</h1> */}
+                    <h2>Emergency Service Login</h2>
+                    <form onSubmit={this.onSubmit}>
+                        <label>username </label>
+                        <input name="username" type="text" value={this.state.username} onChange={this.handleChange}/>
+                        <br/>
+                        <label>password </label>
+                        <input name="password" type="password" value={this.state.password} onChange={this.handleChange} />
+                        <br/>
+                        <button className="App-button" type="submit">Inloggen</button>
+                    </form>
+                </header>
         );
     }
 }
